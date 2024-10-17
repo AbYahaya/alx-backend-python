@@ -5,7 +5,8 @@ executing multiple asynchronous coroutines.
 """
 import time
 import asyncio
-from 1_concurrent_coroutines import wait_n
+# Import wait_n using __import__
+wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
 async def measure_time(n: int, max_delay: int) -> float:
