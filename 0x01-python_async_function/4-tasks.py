@@ -5,7 +5,9 @@ that wait for a random delay and return the results in ascending order.
 """
 import asyncio
 from typing import List
-from 3_tasks import task_wait_random
+
+# Import task_wait_random using __import__
+task_wait_random = __import__('3-tasks').task_wait_random
 
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
